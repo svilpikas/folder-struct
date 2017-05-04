@@ -1,0 +1,15 @@
+{
+  "name": "app",
+  "authors": [
+    "Vytautas <vj@bungalowsystems.com>"
+  ],
+  "description": "seb",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.5.5",
+    "angular-ui-router": "^0.3.0",
+    "components-font-awesome": "^4.6.3",
+    "ng-dialog": "^0.6.1",
+    "bootstrap-sass": "^3.3.6"
+  }
+}

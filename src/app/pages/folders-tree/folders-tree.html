@@ -1,0 +1,36 @@
+<div class="outer-container">
+    <div class="inner-cont full-screen clearfix">
+        <div class="row">
+            <div class="folders-explorer col-lg-2 col-md-4 col-sm-5 col-xs-12" >
+                <folder-tree all="vm.formatedReleationData" currentiteration="0" breadcrumb="vm.breadcrumb">
+                </folder-tree>
+
+            </div>
+            <div class="user-road col-lg-10 col-md-8 col-sm-7 col-xs-12">
+                <ul class="pull-left">
+                    <li ng-repeat="breadcrumb in vm.breadcrumb track by $index">
+                    <span ng-if="breadcrumb!==undefined"
+                          ng-click="vm.goToCurrent(breadcrumb)">{{breadcrumb.name}}/</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="manage-buttons col-lg-10 col-md-8 col-sm-7 col-xs-12">
+                <button type="button" ng-click="vm.createFolder(vm.current)" class="btn btn-success">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                    New button
+                    </button>
+            </div>
+            <div class="folder-view col-lg-10 col-md-8 col-sm-7 col-xs-12">
+                <div ng-if="vm.current.id !== 0 " class="folder-block">
+                    <div ng-click="vm.getParentFolder(vm.current)" class="folder-logo"></div>
+                    <div class="folder-name">...</div>
+                </div>
+                <div class="folder-block" ng-repeat="folder in vm.formatedReleationData[vm.current.id]">
+                    <div ng-click="vm.getSubFolders(folder)" class="folder-logo"></div>
+                    <div class="folder-name">{{folder.name}}</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

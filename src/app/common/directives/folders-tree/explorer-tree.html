@@ -1,0 +1,11 @@
+<ul ng-if="vm.formatedReleationData[vm.currentIteration]">
+    <li ng-repeat="folder in vm.formatedReleationData[vm.currentIteration]"
+        ng-class="vm.breadcrumb[folder.id] !== undefined ? 'active' : '' ">
+        <div ng-click="vm.goTo(folder)" class="folders-tree-name">
+            <i class="fa" ng-class="vm.breadcrumb[folder.id] !== undefined ? 'fa-folder-open-o': 'fa-folder-o'"
+               aria-hidden="true"></i> {{folder.name}}
+        </div>
+        <folder-tree all="vm.formatedReleationData" currentiteration="folder.id" breadcrumb="vm.breadcrumb">
+        </folder-tree>
+    </li>
+</ul>
