@@ -3,6 +3,7 @@
   "authors": [
     "Vytautas <vj@bungalowsystems.com>"
   ],
+  "keywords": ["trololo"],
   "description": "seb",
   "license": "MIT",
   "dependencies": {
@@ -11,5 +12,6 @@
     "components-font-awesome": "^4.6.3",
     "ng-dialog": "^0.6.1",
     "bootstrap-sass": "^3.3.6"
-  }
+  },
+  "private": false
 }
